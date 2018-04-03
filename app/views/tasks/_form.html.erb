@@ -1,0 +1,21 @@
+<%= form_for(@task) do |f| %>
+  <div class="form-control title">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="form-control details">
+    <%= f.label :details, "Details" %>
+    <%= f.text_field :details %>
+  </div>
+
+  <div class="check_box">
+    <%= f.check_box :completed %>
+    <%= f.label :completed, "Completed?" %>
+  </div>
+  <!-- f.check_box :public, {}, "true", "false" -->
+
+  <div class="form-control completed">
+    <%= f.submit value="Submit"%>
+  </div>
+<% end %>
